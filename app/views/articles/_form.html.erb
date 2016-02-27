@@ -1,5 +1,6 @@
 <%= simple_form_for(@article) do |f| %>
   <%= f.input :title %>
+  <%= f.input :article_img, as: :file, label: 'Image' %>
   <%= f.input :body %>
   <%= f.submit %>
 <% end %>

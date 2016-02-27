@@ -4,4 +4,10 @@
 
 <%= @articles.each do |article| %>
   <%= link_to article.title, article %>
+  <% if article.article_img.present? %>
+    <h4>Attachment</h4>
+    <div class="attachment">
+      <%= image_tag article.article_img %>
+    </div>
+  <% end %>
 <% end %>
