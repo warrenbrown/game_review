@@ -17,10 +17,67 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
+ @import 'style.css';
+ @import 'jquery.bxlider.css';
+ @import 'bootstrap-theme.css';
 
+body {
+  padding: 60px
+}
+
+ul.actions {
+  @extend .list-unstyled;
+  @extend .list-inline;
+}
  .alert-notice {
   @extend .alert-success;
 }
 .alert-alert {
   @extend .alert-danger;
+}
+
+a.new {
+  @extend .btn;
+  @extend .btn-success;
+  &:before {
+    font-family: "FontAwesome";
+    @extend .fa-plus;
+    padding-right: 0.5em;
+  }
+}
+
+a.edit {
+  @extend .btn;
+  @extend .btn-primary;
+  &:before {
+    font-family: "FontAwesome";
+    @extend .fa-pencil;
+    padding-right: 0.5em;
+  }
+}
+a.delete {
+  @extend .btn;
+  @extend .btn-danger;
+  &:before {
+    font-family: "FontAwesome";
+    @extend .fa-trash;
+    padding-right: 0.5em;
+  }
+}
+
+.business-header {
+  height: 400px;
+  background: url(http://chimalcircusarts.com/wp-content/uploads/2015/02/aerial-fb.png) center center no-repeat scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
 }

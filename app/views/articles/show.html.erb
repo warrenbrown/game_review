@@ -1,4 +1,40 @@
-<h1><%= @article.title %></h1>
+<div class="page-header">
 
-<%= link_to 'Edit', edit_article_path(@article) %>
-<%= link_to 'Delete Article', article_path(@article), method: :delete, data: { confirm: 'Are you sure want to delete this article?'} %>
+  <ul class="actions">
+    <li><%= link_to 'Edit Article', edit_article_path(@article),
+            class: 'edit' %></li>
+    <li><%= link_to 'Delete Article', article_path(@article),
+              method: :delete,
+              data: { confirm: 'Are you sure want to delete this article?' },
+              class: 'delete' %></li>
+  </ul>
+</div>
+
+<section>
+			<div class="row">
+				<div class="col-md-8">
+					<article class="blog-post">
+						<div class="blog-post-image">
+              <%= image_tag @article.article_img %>
+						</div>
+						<div class="blog-post-body">
+							<h2><%= @article.title %></h2>
+							<div class="post-meta"><span>by <a href="#">Jamie Mooze</a></span>/<span><i class="fa fa-clock-o"></i>March 14, 2015</span>/<span><i class="fa fa-comment-o"></i> <a href="#">343</a></span></div>
+							<div class="blog-post-text">
+                <p><%= @article.body %></p>
+							</div>
+						</div>
+            <div id="comments">
+              <h2><%= @article.comments.count %> Comments</h2>
+            		<%= render @article.comments %>
+
+            	<h3>Add a comment:</h3>
+              <%= render "comments/form" %>
+            </div>
+					</article>
+				</div>
+
+
+					<!-- sidebar-widget -->
+				<%= render 'shared/side_bar_gutter' %>
+		</section>
