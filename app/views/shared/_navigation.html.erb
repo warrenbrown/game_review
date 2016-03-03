@@ -15,15 +15,6 @@
           <%= link_to 'Home', root_path %>
         </li>
         <li>
-          <a href="#about">Lifestyle</a>
-        </li>
-        <li>
-          <a href="#contact">Travel</a>
-        </li>
-        <li>
-          <a href="#contact">Fashion</a>
-        </li>
-        <li>
           <a href="about.html">About Me</a>
         </li>
         <li>
@@ -32,39 +23,18 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
+        <% if signed_in? && current_user.email == 'warren@katapultmedia.com' %>
       <li>
         <%= link_to fa_icon("plus") +  ' Add New Article', new_article_path %>
       </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-facebook"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-twitter"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-instagram"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-google-plus"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-dribbble"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-reddit"></i>
-          </a>
-        </li>
+        <% end %>
+      <% if user_signed_in? %>
+         <p class="navbar-text">Signed in as <%= current_user.email %></p>
+         <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+         <% else %>
+           <li><%= link_to 'Sign up', new_user_registration_path %>
+             <li><%= link_to 'Sign in', new_user_session_path %>
+         <% end %>
       </ul>
 
     </div>

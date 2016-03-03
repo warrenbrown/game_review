@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.4'
+ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
@@ -44,7 +44,7 @@ group :development, :test do
   gem 'byebug'
   gem 'shoulda-matchers', require: false
   gem 'letter_opener'
-  #gem 'sqlite3', '~> 1.3', '>= 1.3.11'
+  gem 'sqlite3', '~> 1.3', '>= 1.3.11'
   gem 'terminal-notifier-guard'
   gem 'pry-rails'
   gem 'pry-byebug'
