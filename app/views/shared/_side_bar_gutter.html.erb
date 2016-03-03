@@ -21,7 +21,7 @@
           </div>
           <div class="post-body">
             <h2>
-              <%= featured.title %>
+              <%= link_to featured.title, article_path(featured) %>
             </h2>
             <div class="post-meta">
               <span>
@@ -44,24 +44,7 @@
       <h3 class="sidebar-title">Socials</h3>
       <div class="widget-container">
         <div class="widget-socials">
-          <a href="#">
-            <i class="fa fa-facebook"></i>
-          </a>
-          <a href="#">
-            <i class="fa fa-twitter"></i>
-          </a>
-          <a href="#">
-            <i class="fa fa-instagram"></i>
-          </a>
-          <a href="#">
-            <i class="fa fa-google-plus"></i>
-          </a>
-          <a href="#">
-            <i class="fa fa-dribbble"></i>
-          </a>
-          <a href="#">
-            <i class="fa fa-reddit"></i>
-          </a>
+          <%= render 'shared/tweets' %>
         </div>
       </div>
     </div>
