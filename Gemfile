@@ -44,7 +44,7 @@ group :development, :test do
   gem 'byebug'
   gem 'shoulda-matchers', require: false
   gem 'letter_opener'
-
+  #gem 'sqlite3', '~> 1.3', '>= 1.3.11'
   gem 'terminal-notifier-guard'
   gem 'pry-rails'
   gem 'pry-byebug'
