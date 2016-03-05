@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery-ui
  */
 
  @import "bootstrap-sprockets";
@@ -20,9 +21,10 @@
  @import 'style.css';
  @import 'jquery.bxlider.css';
  @import 'bootstrap-theme.css';
+ @import 'jquery.bxslider.css';
 
 body {
-  padding: 60px
+  padding: 60px;
 }
 
 ul.actions {

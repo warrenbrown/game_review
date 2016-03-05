@@ -1,3 +1,10 @@
+<section class="main-slider">
+  <ul class="bxslider">
+    <% @articles.each do |image| %>
+      <li><%= image_tag image.article_img %></li>
+    <% end %>
+  </ul>
+</section>
   <section>
     <div class="row">
       <div class="col-md-8">
