@@ -38,4 +38,9 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # config/environments/production.rb
+  # Sets Paperclip to upload images to AMazon s3
+
+  
 end
