@@ -76,7 +76,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
+  
+# Sets Paperclip to upload images to AMazon s3
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
